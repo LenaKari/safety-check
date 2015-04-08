@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Safety Check</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/safety-check.css" rel="stylesheet">
+	  <script src="js/safety-check.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="row prime-directive">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 alert alert-default">
+        <h3>Prime Directive:</h3>
+        <p>Regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills and abilities, the resources available, and the situation at hand.</p>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 alert alert-default" id="message-display">Select an option and then press 'Pass it on'</div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5"></div>
+	    <div class="col-md-2">
+        <button class="btn btn-default" onclick="newSubmit()">Pass it on</button>
+      </div>
+      <div class="col-md-5"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-1">
+        <button class="btn btn-danger" onclick="submitScore(1)">1</button>
+      </div>
+      <div class="col-m-5">
+        <p>I am not comfortable being here. I want to leave.</p>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-1">
+        <button class="btn btn-warning" onclick="submitScore(2)">2</button>
+      </div>
+      <div class="col-m-5">
+        <p>I am not comfortable talking. Even when I have a strong opinion, I will keep it to myself.</p>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-1">
+        <button class="btn btn-info" onclick="submitScore(3)">3</button>
+      </div>
+      <div class="col-m-5">
+        <p>I'm happy to sit and listen, and I will talk if something I feel strongly about comes up.</p>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-1">
+        <button class="btn btn-success" onclick="submitScore(4)">4</button>
+      </div>
+      <div class="col-m-5">
+        <p>I am open to talk about most things, but there are a few small topics that I may keep quiet on.</p>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-1">
+        <button class="btn btn-primary" onclick="submitScore(5)">5</button>
+      </div>
+      <div class="col-m-5">
+        <p>I am open to talk about anything and want to explore others' thoughts as well as my own.</p>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5"></div>
+	    <div class="col-md-2">
+        <button class="btn btn-default" onclick="decideProceed()">Determine</button>
+      </div>
+      <div class="col-md-5"></div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
