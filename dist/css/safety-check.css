@@ -6383,6 +6383,11 @@ button.close {
 .visible-lg-inline-block {
   display: none !important;
 }
+/*  #################### CUSTOM CSS ####################  */
+
+body {
+  max-width: 600px;
+}
 .row {
   margin-bottom: 1.5%;
   text-align: center;
@@ -6392,7 +6397,7 @@ button.close {
   margin-bottom: 0;
   font-style: italic;
 }
-.prime-directive > .alert-default {
+.prime-directive > .panel-default {
   margin-bottom: 0;
 }
 .row p {
@@ -6401,11 +6406,29 @@ button.close {
   line-height: 2.4em;
 }
 #message-display {
-  height: 65px;
+  min-height: 65px;
   font-size: 1.5em;
 }
 .alert {
   border-width: 2px;
+}
+.function-buttons button {
+  font-weight: bold;
+  width: 80%;
+  margin: 0.5em 0;
+}
+.submit-button {
+  white-space: normal;
+  width: 80%;
+  text-align: center;
+  padding: 2em;
+}
+.submit-button h2 {
+  margin-top: 0;
+}
+.submit-button p {
+  text-align: center;
+  line-height: 1.5em;
 }
 @media (max-width: 767px) {
   .visible-xs {
