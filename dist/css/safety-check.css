@@ -6384,21 +6384,44 @@ button.close {
   display: none !important;
 }
 /*  #################### CUSTOM CSS ####################  */
+@font-face {
+    font-family: DosisBold;
+    src: url(../fonts/Dosis-Bold.ttf);
+}
+@font-face {
+    font-family: Dosis;
+    src: url(../fonts/Dosis-Medium.ttf);
+}
 
 body {
+  width: 96%;
   max-width: 600px;
+  min-width: 320px;
+  margin: auto;
+  font-family: Dosis;
+}
+.page-title {
+  font-family: DosisBold;
+  text-align: center;
 }
 .row {
   margin-bottom: 1.5%;
   text-align: center;
   font-weight: bold;
 }
-.prime-directive {
-  margin-bottom: 0;
-  font-style: italic;
+.panel-group {
+  margin: auto;
+  width: 95%;
 }
-.prime-directive > .panel-default {
-  margin-bottom: 0;
+.panel .panel-default {
+  margin-top: 0;
+}
+.panel-heading {
+  font-family: DosisBold;
+  text-align: center;
+}
+.justify-text {
+  text-align: justify;
 }
 .row p {
   text-align: left;
@@ -6406,29 +6429,38 @@ body {
   line-height: 2.4em;
 }
 #message-display {
+  margin: 0.7em auto;
+  width: 90%;
   min-height: 65px;
   font-size: 1.5em;
+}
+.alert-div {
+  margin-bottom: 0;
 }
 .alert {
   border-width: 2px;
 }
 .function-buttons button {
   font-weight: bold;
-  width: 80%;
+  width: 90%;
   margin: 0.5em 0;
 }
 .submit-button {
   white-space: normal;
-  width: 80%;
+  width: 90%;
   text-align: center;
   padding: 2em;
 }
 .submit-button h2 {
   margin-top: 0;
+  font-family: DosisBold;
 }
 .submit-button p {
   text-align: center;
   line-height: 1.5em;
+}
+.footer {
+  text-align: center;
 }
 @media (max-width: 767px) {
   .visible-xs {

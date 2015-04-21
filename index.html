@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Safety Check</title>
 
-    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/safety-check.css" rel="stylesheet">
 	  <script src="js/safety-check.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,94 +20,122 @@
     <![endif]-->
   </head>
   <body>
-    <div class="row prime-directive">
-      <div class="col-md-1"></div>
-      <div class="col-md-10 alert alert-default">
-        <h3>Prime Directive:</h3>
-        <p>Regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills and abilities, the resources available, and the situation at hand.</p>
+    <h3 class="page-title">Agile Retrospective Safety Check</h3>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Prime Directive
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body justify-text">
+            Regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills and abilities, the resources available, and the situation at hand.
+          </div>
+        </div>
       </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10 alert alert-default" id="message-display">Select an option and then press 'Pass it on'</div>
-      <div class="col-md-1"></div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-5"></div>
-	    <div class="col-md-2">
-        <button class="btn btn-default" onclick="newSubmit()">Pass it on</button>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              How to use this app
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body justify-text">
+            <ul>
+              <li>Double-tap/click the option that best describes how you feel. If you have selected the wrong option, select 'Reset scores' (be aware that this resets all scores, so voting must start again.)</li>
+              <li>Select 'Pass it on', which will hide the option you selected.</li>
+              <li>Pass the device to the next person.</li>
+              <li>Once the device is returned to the facilitator, select 'Determine' to determine if the retrospective should be postponed due to any participants feeling unsafe.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="col-md-5"></div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-1">
-        <button class="btn btn-danger" onclick="submitScore(1)">1</button>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              What is a safety check?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body justify-text">
+            <p>The safety check, typically performed at the start of a retrospective, is a tool often used by a facilitator to gauge the safety of the participants, to see how comfortable they feel in expressing their opinions and getting involved in discussion and is often used to make a judgement call on whether or not the retrospective should continue.</p>
+            <p>If the safety is too low, well then it indicates that people aren’t really comfortable in expressing their thoughts, meaning that you can’t really expect any real value to come of the retrospective.</p>
+            <p><a href="http://www.akashb.com/blog/2012/05/28/agile-retrospectives-the-safety-check/">More information on safety checks.</a></p>
+          </div>
+        </div>
       </div>
-      <div class="col-m-5">
-        <p>I am not comfortable being here. I want to leave.</p>
-      </div>
-      <div class="col-md-3"></div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-1">
-        <button class="btn btn-warning" onclick="submitScore(2)">2</button>
-      </div>
-      <div class="col-m-5">
-        <p>I am not comfortable talking. Even when I have a strong opinion, I will keep it to myself.</p>
-      </div>
-      <div class="col-md-3"></div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-1">
-        <button class="btn btn-info" onclick="submitScore(3)">3</button>
-      </div>
-      <div class="col-m-5">
-        <p>I'm happy to sit and listen, and I will talk if something I feel strongly about comes up.</p>
-      </div>
-      <div class="col-md-3"></div>
     </div>
 
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-1">
-        <button class="btn btn-success" onclick="submitScore(4)">4</button>
+
+    <div class="row alert-div">
+      <div class="alert alert-warning" id="message-display">
+        Select an option
       </div>
-      <div class="col-m-5">
-        <p>I am open to talk about most things, but there are a few small topics that I may keep quiet on.</p>
-      </div>
-      <div class="col-md-3"></div>
     </div>
 
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-1">
-        <button class="btn btn-primary" onclick="submitScore(5)">5</button>
+    <div class="row function-buttons">
+      <div>
+        <button class="btn btn-default" ondblclick="clearScores()">Reset scores</button>
       </div>
-      <div class="col-m-5">
-        <p>I am open to talk about anything and want to explore others' thoughts as well as my own.</p>
-      </div>
-      <div class="col-md-3"></div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-5"></div>
-	    <div class="col-md-2">
+      <div>
         <button class="btn btn-default" onclick="decideProceed()">Determine</button>
       </div>
-      <div class="col-md-5"></div>
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <div class="row">
+      <div>
+        <button class="btn btn-danger submit-button" ondblclick="selectScore(1)">
+          <h2>1</h2>
+          <p>I am not comfortable being here. I want to leave.</p>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <button class="btn btn-warning submit-button" ondblclick="selectScore(2)">
+          <h2>2</h2>
+          <p>I am not comfortable talking. Even when I have a strong opinion, I will keep it to myself.</p>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <button class="btn btn-info submit-button" ondblclick="selectScore(3)">
+          <h2>3</h2>
+          <p>I'm happy to sit and listen, and I will talk if something I feel strongly about comes up.</p>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <button class="btn btn-success submit-button" ondblclick="selectScore(4)">
+          <h2>4</h2>
+          <p>I am open to talk about most things, but there are a few small topics that I may keep quiet on.</p>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <button class="btn btn-primary submit-button" ondblclick="selectScore(5)">
+          <h2>5</h2>
+          <p>I am open to talk about anything and want to explore others' thoughts as well as my own.</p>
+        </button>
+      </div>
+    </div>
+
+    <div class='footer'>
+      Made by <a href='http://www.olenalevitsky.com'>Olena Levitsky</a> of <a href='http://www.glastonbridge.com'>Glastonbridge</a>. License: <a href='http://www.gnu.org/licenses/agpl-3.0.html'>AGPL</a>
+    </div>
   </body>
 </html>
