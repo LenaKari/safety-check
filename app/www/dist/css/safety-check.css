@@ -6423,6 +6423,9 @@ body {
 .justify-text {
   text-align: justify;
 }
+ul {
+  padding-left: 0.7em;
+}
 .row p {
   text-align: left;
   margin-bottom: 0;

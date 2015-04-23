@@ -47,7 +47,7 @@
         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
           <div class="panel-body justify-text">
             <ul>
-              <li>Double-tap/click the option that best describes how you feel. If you have selected the wrong option, double-tap/click 'Reset scores' (be aware that this resets all scores, so voting must start again.)</li>
+              <li>Select the option that best describes how you feel. If you have selected the wrong option, select 'Reset scores' (be aware that this resets all scores, so voting must start again.)</li>
               <li>Select 'Pass it on', which will hide the option you selected.</li>
               <li>Pass the device to the next person.</li>
               <li>Once the device is returned to the facilitator, select 'Determine' to determine if the retrospective should be postponed due to any participants feeling unsafe.</li>
@@ -82,7 +82,7 @@
 
     <div class="row function-buttons">
       <div>
-        <button class="btn btn-default" ondblclick="clearScores()">Reset scores</button>
+        <button class="btn btn-default" onclick="clearScores()">Reset scores</button>
       </div>
       <div>
         <button class="btn btn-default" onclick="decideProceed()">Determine</button>
@@ -91,7 +91,7 @@
 
     <div class="row">
       <div>
-        <button class="btn btn-danger submit-button" ondblclick="selectScore(1)">
+        <button class="btn btn-danger submit-button" onclick="selectScore(1)">
           <h3>1</h3>
           <p>I am not comfortable being here. I want to leave.</p>
         </button>
@@ -100,7 +100,7 @@
 
     <div class="row">
       <div>
-        <button class="btn btn-warning submit-button" ondblclick="selectScore(2)">
+        <button class="btn btn-warning submit-button" onclick="selectScore(2)">
           <h3>2</h3>
           <p>I am not comfortable talking. Even when I have a strong opinion, I will keep it to myself.</p>
         </button>
@@ -109,7 +109,7 @@
 
     <div class="row">
       <div>
-        <button class="btn btn-info submit-button" ondblclick="selectScore(3)">
+        <button class="btn btn-info submit-button" onclick="selectScore(3)">
           <h3>3</h3>
           <p>I'm happy to sit and listen, and I will talk if something I feel strongly about comes up.</p>
         </button>
@@ -118,7 +118,7 @@
 
     <div class="row">
       <div>
-        <button class="btn btn-success submit-button" ondblclick="selectScore(4)">
+        <button class="btn btn-success submit-button" onclick="selectScore(4)">
           <h3>4</h3>
           <p>I am open to talk about most things, but there are a few small topics that I may keep quiet on.</p>
         </button>
@@ -127,7 +127,7 @@
 
     <div class="row">
       <div>
-        <button class="btn btn-primary submit-button" ondblclick="selectScore(5)">
+        <button class="btn btn-primary submit-button" onclick="selectScore(5)">
           <h3>5</h3>
           <p>I am open to talk about anything and want to explore others' thoughts as well as my own.</p>
         </button>
