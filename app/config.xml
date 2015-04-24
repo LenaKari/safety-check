@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.safetycheck" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>SafetyCheck</name>
+<widget id="com.glastonbridge.safetycheck" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Agile Retrospective Safety Check</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A simple app that allows retrospective participants to submit their safety check scores on a shared device.
     </description>
     <author email="olena.levitsky@gmail.com" href="http://www.olenalevitsky.com">
         Olena Levitsky
