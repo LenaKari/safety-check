@@ -54,4 +54,6 @@ var clearScores = function(){
   "use strict";
   safetyScores = [];
   finalScores = [];
+  document.getElementById('message-display').className = 'alert alert-warning';
+  document.getElementById('message-display').innerHTML = "Select an option";
 };
